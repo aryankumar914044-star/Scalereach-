@@ -1,0 +1,9 @@
+{
+  "name": "scalereach-yt-oauth-helper",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "googlevideo": "^5.0.1",
+    "youtubei.js": "^18.3.0"
+  }
+}

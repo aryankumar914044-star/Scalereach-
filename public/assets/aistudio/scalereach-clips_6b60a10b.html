@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scalereach – Clips</title>
+<style>
+:root{--bg:#0a0a0a;--card:#131313;--bd:#262626;--tx:#f2f2f2;--mut:#9d9d9d;--bl:#2a4fd8;--lk:#3b6ef0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0a}}
+:root[data-theme="dark"]{--bg:#0a0a0a}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Roboto,Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;color:inherit}
+.app{max-width:360px;margin:0 auto;padding-bottom:90px}
+svg.s{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;height:47px;background:#0c0c0c;border-bottom:1px solid #1d1d1d;display:flex;align-items:center;padding-right:16px}
+.tg{width:27px;height:27px;margin-left:12px;border-radius:8px;border:1px solid #343434;background:#161616;display:grid;place-items:center;padding:0;cursor:pointer}
+.tg svg{width:14px;height:14px}
+.dv{width:1px;align-self:stretch;margin-left:12px;background:#222}
+.crumb{display:flex;align-items:center;gap:11px;margin-left:13px;font-size:13.5px;color:var(--mut);flex:1;white-space:nowrap}
+.crumb svg{width:10px;height:10px}
+.crumb b{font-weight:400;color:#fff}
+.freeb{height:20px;padding:0 6px;border-radius:8px;border:1px solid #3a3a3a;background:#1a1a1a;font-size:12px;display:flex;align-items:center;color:#eee}
+#body{display:flex;flex-direction:column}
+#body>*{margin:17px 16px 0}
+/* head */
+.head{position:relative;height:105px;margin:0!important;border-bottom:1px solid #1a1a1a;order:1}
+.head>*{position:absolute}
+.hb{left:23px;top:14px;width:14px;height:14px}
+.hb svg{width:14px;height:14px}
+.ht{left:52.7px;top:10px;width:128px;font-size:16px;line-height:21px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.share{left:191.7px;top:7px;width:152px;height:37px;border-radius:14px;border:1px solid #333;background:#151515;font-size:14px;display:flex;align-items:center;gap:9px;padding:0 0 0 15px;cursor:pointer}
+.share svg{width:11px;height:11px}
+.dt{left:52px;top:48px;font-size:13px;line-height:20px;color:var(--mut)}
+.sep{left:92px;top:53px;width:1px;height:11px;background:#2c2c2c}
+.pl{height:20px;border-radius:10px;border:1px solid #2a2a2a;background:#181818;font-size:13px;display:flex;align-items:center;gap:6px;padding:0 7px 0 6px;white-space:nowrap}
+.pl svg{width:12px;height:12px}
+.yt{width:12px;height:8.5px;background:#f00;border-radius:2.5px;position:relative;flex:none}
+.yt:after{content:"";position:absolute;left:4.5px;top:2px;border-left:3.5px solid #fff;border-top:2.2px solid transparent;border-bottom:2.2px solid transparent}
+.exp{border-color:#8f6d12;background:#271d07;color:#f0b100}
+.note{color:#a8a8a8}
+/* cards */
+.card{border:1px solid var(--bd);background:var(--card);border-radius:20px}
+.free{order:3;padding:12px 13px;margin-top:17px}
+.ft{display:flex;gap:12px;align-items:center}
+.bolt{width:36px;height:36px;border-radius:12px;background:#3a2909;display:grid;place-items:center;flex:none;color:#f59e0b}
+.bolt svg{width:16px;height:16px}
+.ft b{display:block;font-weight:400;font-size:14.5px;line-height:20px}
+.ft p{margin:0;font-size:13px;line-height:16px;color:#a2a2a2}
+.up{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;height:34px;margin-top:13px;border-radius:12px;border:1px solid #4a6ee3;background:linear-gradient(#3157d6,#2547b5);color:#e3e9ff;font-size:15px;cursor:pointer;box-shadow:0 0 12px #2447d866}
+.up svg{width:15px;height:15px}
+/* processing */
+.proc{order:4;padding:20px 21px 18px;text-align:center;overflow:hidden}
+.pic{display:none;position:relative;height:180px;margin:-20px -21px 36px;background:radial-gradient(circle at 80% 14%,#ff9cff 0,#b030d0 10%,transparent 34%),radial-gradient(circle at 32% 38%,#8a6a68 0,#5a4568 18%,transparent 36%),radial-gradient(circle at 66% 52%,#2c1226 0,#3a1a38 18%,transparent 34%),linear-gradient(135deg,#5a1a8a,#8a22a8 55%,#2a0850)}
+.pic:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.25),rgba(19,19,19,.15) 45%,#131313 100%)}
+.pic i{position:absolute;left:9px;bottom:8px;width:25px;height:25px;border-radius:50%;background:#0a7aa8;opacity:.5;z-index:1}
+[data-s="2"] .pic{display:block}
+.proc h2{margin:0;font-size:16px;line-height:24px;font-weight:400}
+.proc .d{margin:8px 0 0;font-size:14px;line-height:20px;color:#a2a2a2}
+.steps{margin:12px 0 0 0;padding:0 0 0 26px;list-style:none;text-align:left}
+.steps li{display:flex;align-items:center;gap:14px;height:36px;font-size:14px;color:#363636}
+.ic{width:20px;height:20px;border-radius:50%;border:1.7px solid #2e2e2e;display:grid;place-items:center;flex:none;color:#2e2e2e}
+.ic svg{width:10px;height:10px}
+.steps .done{color:#fff}
+.steps .done .ic{background:var(--bl);border-color:var(--bl);color:#fff}
+.steps .act{color:var(--lk)}
+.steps .act .ic{border-color:#25376e;border-top-color:#2f5ae8;border-left-color:#2f5ae8;animation:r 1s linear infinite}
+.steps .act .ic svg{display:none}
+@keyframes r{to{transform:rotate(360deg)}}
+.pb{height:6px;border-radius:3px;background:#17234f;margin-top:11px;overflow:hidden}
+.pb i{display:block;height:100%;background:#2447d8;border-radius:3px;transition:width .25s}
+.st{margin-top:6px;font-size:14px;line-height:20px;color:#a2a2a2}
+.lv{margin-top:15px;font-size:12.5px;line-height:16px;color:#7a7a7a}
+[data-s="1"] .ban,[data-s="1"] .vt,[data-s="1"] .clips,[data-s="2"] .ban,[data-s="2"] .vt,[data-s="2"] .clips,[data-s="2"] .head{display:none}
+[data-s="2"] .proc{order:0;margin-top:10px}
+[data-s="2"] .free{margin-top:25px}
+[data-s="3"] .proc{display:none}
+[data-s="3"] .free{margin-top:9px}
+/* banner */
+.ban{order:2;border-color:#4a3510;background:#1a1308;padding:12px 17px 13px}
+.br{display:flex;align-items:center;gap:14px}
+.sp{width:14px;height:14px;border-radius:50%;border:2px solid #e8820c;border-top-color:transparent;animation:r 1s linear infinite;flex:none}
+.br div{flex:1;min-width:0;padding-right:6px}
+.br b{display:block;font-weight:400;font-size:15px;line-height:20px}
+.br p{margin:3px 0 0;font-size:13px;line-height:16px;color:#a39c90}
+.br span.pc{font-size:16px;color:#e8820c;flex:none}
+.ban .pb{margin-top:10px;background:#162049}
+.vt{order:5;align-self:flex-end;display:flex;margin-top:9px!important;width:75px;height:31px;border:1px solid #333;background:#141414;border-radius:14px;padding:2px}
+.vt span{flex:1;display:grid;place-items:center;border-radius:12px;color:#aaa}
+.vt .on{background:#050505;color:#fff}
+.vt svg{width:15px;height:15px}
+.clips{order:6;display:flex;flex-direction:column;gap:24px}
+.cc{border:1px solid var(--bd);background:#131313;border-radius:20px;overflow:hidden}
+.ch{height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;background:#171717;border-bottom:1px solid #242424}
+.ch span{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:12px}
+.ch span u{text-decoration:none;color:#9a9a9a}
+.sc{flex:none;width:60px;height:23px;border-radius:10px;border:1px solid #0f6a45;background:#0b2a1f;color:#22c58b;font-size:15px;display:flex;align-items:center;justify-content:center;gap:9px}
+.sc.o{border-color:#8a5a10;background:#2a1d08;color:#f59e0b}
+.vw{margin:12px auto 0;width:260px;height:462px;border-radius:20px;background:#0a0a0a;position:relative;overflow:hidden;text-align:center}
+.gn{position:absolute;left:0;right:0;top:0;bottom:0}
+.gn b{position:absolute;left:0;right:0;top:193px;font-size:28px;line-height:36px;font-weight:700}
+.gn p{position:absolute;left:0;right:0;top:233px;margin:0;font-size:15px;line-height:20px;color:#a8a8a8}
+.gn em{position:absolute;left:0;right:0;top:261px;font-style:normal;font-size:13px;line-height:18px;color:#6a6a6a}
+.vb{position:absolute;left:3px;right:3px;bottom:1px;height:3px;border-radius:2px;background:linear-gradient(90deg,#666,#444)}
+.vb i{display:block;height:100%;border-radius:2px;background:#3b5bdb}
+.rd{display:none;position:absolute;inset:0;background:radial-gradient(circle at 78% 14%,#ff9cff 0,#c433dd 10%,transparent 34%),radial-gradient(circle at 34% 36%,#9a7a68 0,#6a5568 20%,transparent 38%),radial-gradient(circle at 64% 60%,#2c1226 0,#4a1a38 20%,transparent 40%),linear-gradient(160deg,#6a1a9a,#b02ac8 55%,#3a1060)}
+.rd i{position:absolute;left:50%;top:50%;width:48px;height:48px;margin:-24px;border-radius:50%;background:#0009;display:grid;place-items:center}
+.rd i:after{content:"";border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.done .gn,.done .vb{display:none}
+.done .rd{display:block}
+.tr{display:flex;align-items:center;justify-content:center;gap:9px;height:33px;margin:16px 13px 0;border:1px solid #272727;border-radius:12px;background:#151515;font-size:15px;color:#b0b0b0;cursor:pointer;width:calc(100% - 26px)}
+.tr svg{width:16px;height:16px}
+.ln{height:1px;background:#232323;margin:29px 13px 0}
+.ac{display:flex;align-items:center;margin:17px 13px 14px;height:36px}
+.ac button{width:36px;height:36px;border-radius:12px;border:1px solid #2c2c2c;background:none;display:grid;place-items:center;padding:0;cursor:pointer;color:#bbb}
+.ac .dl{background:#1c3a8c;border-color:#1c3a8c;margin-right:8px}
+.ac .r{margin-left:auto;display:flex}
+.ac .r button{border:0}
+.ac svg{width:18px;height:18px}
+.chat{position:fixed;right:max(24px,calc(50% - 156px));bottom:calc(19px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;background:#1a6cf5;border:0;display:grid;place-items:center;cursor:pointer;z-index:9}
+.chat svg{width:30px;height:30px;fill:#fff}
+button:focus-visible{outline:2px solid #8aa6ff;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.sp,.steps .act .ic{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ck" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+<symbol id="lk" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+<div class="app">
+  <header class="bar">
+    <button class="tg" type="button" aria-label="Toggle sidebar"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg></button>
+    <span class="dv"></span>
+    <div class="crumb"><span>Dashboard</span><svg class="s" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg><span>Videos</span><svg class="s" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg><b>Clips</b></div>
+    <span class="freeb">Free</span>
+  </header>
+
+  <main id="body" data-s="1">
+    <section class="head">
+      <button class="hb" type="button" aria-label="Back" style="background:none;border:0;padding:0"><svg class="s" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+      <div class="ht">5 Features You ONLY Get In The Ultimate Edition of GTA 6</div>
+      <button class="share" type="button"><svg class="s"><use href="#lk"/></svg>Share Clips (Pro)</button>
+      <span class="dt">Nov 16</span><span class="sep"></span>
+      <span class="pl" style="left:99.7px;top:48px"><span class="yt" style="width:13px;height:9.5px"></span>YouTube</span>
+      <span class="pl" style="left:178.7px;top:48px"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15v-3h3"/></svg>9:16</span>
+      <span class="pl" style="left:235.7px;top:48px;gap:10px;padding-left:10px">🔥 Viral Clips</span>
+      <span class="pl exp" style="left:52px;top:77px"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Expires Nov 17</span>
+      <span class="pl note" style="left:161px;top:77px"><svg class="s" viewBox="0 0 24 24"><path d="M12 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7l-6 7z"/><path d="M15 20v-5h6"/></svg>Add note</span>
+    </section>
+
+    <section class="card ban" id="ban">
+      <div class="br"><span class="sp"></span><div><b id="bt">Generating clips — 0 of 2 ready</b><p>You can leave this page — we'll send you an email once all clips are ready.</p></div><span class="pc" id="bp">45%</span></div>
+      <div class="pb"><i id="bb" style="width:45%"></i></div>
+    </section>
+
+    <section class="card free">
+      <div class="ft"><span class="bolt"><svg class="s" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><div><b>Free plan: slower queue</b><p>When we're busy, Free videos wait behind paid ones. Pro videos skip ahead.</p></div></div>
+      <button class="up" type="button"><svg class="s" viewBox="0 0 24 24"><path d="M3 18h18M4 7l4 4 4-6 4 6 4-4-2 11H6z"/></svg>Upgrade to Pro</button>
+    </section>
+
+    <section class="card proc">
+      <div class="pic"><i></i></div>
+      <h2 id="pt">Getting Your Video</h2>
+      <p class="d" id="pd"></p>
+      <ul class="steps" id="steps"></ul>
+      <div class="pb"><i id="pbar" style="width:11%"></i></div>
+      <div class="st" id="pst">Step 1 of 4 · 11%</div>
+      <div class="lv">You can leave this page - we'll notify you when it's done.</div>
+    </section>
+
+    <div class="vt"><span class="on"><svg class="s" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="3"/><rect x="4" y="14" width="16" height="7" rx="3"/></svg></span><span><svg class="s" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></svg></span></div>
+
+    <section class="clips" id="clips"></section>
+  </main>
+</div>
+<button class="chat" type="button" aria-label="Chat support"><svg viewBox="0 0 24 24"><path d="M3 4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6l-3 4v-4H5a2 2 0 0 1-2-2z"/></svg></button>
+
+<script>
+var T='5 Features You ONLY Get In The Ultimate Edition of GTA 6',N=['Fetching your video','Preparing your video','Listening to the audio','Finding the best moments'];
+var $=function(i){return document.getElementById(i)},body=$('body');
+$('steps').innerHTML=N.map(function(n){return '<li><span class="ic"><svg class="s"><use href="#ck"/></svg></span>'+n+'</li>'}).join('');
+var cl=[['#1','94',''],['#2','85','o']];
+$('clips').innerHTML=cl.map(function(c,i){return '<article class="cc" id="cc'+i+'"><div class="ch"><span><u>'+c[0]+'</u> GTA 6 Ultimate Edition: Exclusive Moments</span><b class="sc '+c[2]+'" style="font-weight:400">🔥 '+c[1]+'</b></div><div class="vw"><div class="gn"><b id="n'+i+'">0%</b><p>Generating clip…</p><em id="m'+i+'">Hang tight</em></div><div class="rd"><i></i></div><div class="vb"><i id="v'+i+'" style="width:0"></i></div></div><button class="tr" type="button"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 12h3M7 16h6"/></svg>Show transcript <svg class="s" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="ln"></div><div class="ac"><button class="dl" type="button" aria-label="Download"><svg class="s" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg></button><button type="button" aria-label="Edit"><svg class="s" viewBox="0 0 24 24"><path d="M4 20h16M15 4l5 5-11 11H4v-5z"/></svg></button><div class="r"><button type="button" aria-label="Favorite"><svg class="s" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg></button><button type="button" aria-label="Share"><svg class="s" viewBox="0 0 24 24"><path d="M5 12v7h14v-7M12 15V3M8 7l4-4 4 4"/></svg></button><button type="button" aria-label="Delete"><svg class="s" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6"/></svg></button></div></div></article>'}).join('');
+
+var p=11,c=[29,21],ph=1,lis=$('steps').children;
+function r1(){
+ var a=p<25?0:p<50?1:p<75?2:3,s=ph==1&&a<3?1:2;
+ body.dataset.s=s;
+ $('pt').textContent=s==1?'Getting Your Video':'Finding the Best Moments';
+ $('pd').textContent=s==1?'Fetching "'+T+'" - hang tight!':'AI is picking out the most engaging clips from "'+T+'". This may take a few minutes.';
+ for(var i=0;i<4;i++)lis[i].className=i<a?'done':i==a?'act':'';
+ var q=Math.round(p);$('pbar').style.width=q+'%';$('pst').textContent='Step '+(a+1)+' of 4 · '+q+'%';
+}
+function r3(){
+ var avg=(c[0]+c[1])/2,bp=Math.round(45+(avg-25)/75*55),rd=0,msg=Math.floor(Date.now()/3000)%2?'Almost there':'Hang tight';
+ c.forEach(function(v,i){var d=v>=100;if(d)rd++;$('cc'+i).classList.toggle('done',d);$('n'+i).textContent=Math.floor(Math.min(v,100))+'%';$('v'+i).style.width=Math.min(v,100)+'%';$('m'+i).textContent=msg});
+ $('bt').textContent='Generating clips — '+rd+' of 2 ready';$('bp').textContent=Math.min(bp,100)+'%';$('bb').style.width=Math.min(bp,100)+'%';
+ if(rd==2)$('ban').style.display='none';
+}
+r1();
+var iv=setInterval(function(){
+ if(ph==1){p=Math.min(100,p+1.5);r1();if(p>=100){ph=3;body.dataset.s=3;r3();window.scrollTo(0,0)}}
+ else{c[0]+=2.2;c[1]+=1.8;r3();if(c[0]>=100&&c[1]>=100)clearInterval(iv)}
+},300);
+</script>
+</body>
+</html>

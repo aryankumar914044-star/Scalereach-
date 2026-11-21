@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scalereach – Videos</title>
+<style>
+:root{--bg:#0c0c0c;--card:#121212;--bd:#272727;--tx:#f2f2f2;--mut:#9d9d9d;--bl:#3b6ef0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0c0c}}
+:root[data-theme="dark"]{--bg:#0c0c0c}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.app{max-width:360px;margin:0 auto;position:relative;padding-bottom:90px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;height:47px;background:var(--bg);border-bottom:1px solid #1d1d1d;display:flex;align-items:center;padding-right:16px}
+.tg{width:27px;height:27px;margin-left:12px;border-radius:8px;border:1px solid #343434;background:#161616;display:grid;place-items:center;color:var(--tx);padding:0;cursor:pointer}
+.tg svg{width:14px;height:14px}
+.dv{width:1px;align-self:stretch;margin-left:12px;background:#222}
+.crumb{display:flex;align-items:center;gap:10px;margin-left:13px;font-size:13.5px;color:var(--mut);flex:1}
+.crumb svg{width:10px;height:10px}
+.crumb b{font-weight:400;color:#fff}
+.free{height:20px;padding:0 6px;border-radius:8px;border:1px solid #3a3a3a;background:#1a1a1a;font-size:12px;display:flex;align-items:center;color:#eee}
+.hey{display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 17px;margin-top:17px;height:28px}
+.hey h1{margin:0;font-size:22px;font-weight:500;letter-spacing:-.2px;display:flex;align-items:center;gap:9px}
+.hey h1 span{font-size:21px}
+.min{display:flex;align-items:center;gap:7px;height:28px;padding:0 11px;border:1px solid #363636;background:#151515;border-radius:9px;font-size:13.5px}
+.min svg{width:14px;height:14px}
+svg.s{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.main{margin:24px 16px 0;border:1px solid var(--bd);background:var(--card);border-radius:20px;padding:17px;box-shadow:0 6px 18px #0006}
+.imp{height:49px;border:1px dashed #333;background:#151515;border-radius:16px;display:flex;align-items:center;gap:10px;padding:0 15px 0 15px}
+.ytb{width:27px;height:27px;border-radius:8px;background:#000;display:grid;place-items:center;flex:none}
+.yt{width:16px;height:11px;background:#f00;border-radius:3px;position:relative}
+.yt:after{content:"";position:absolute;left:6px;top:2.5px;border-left:5px solid #fff;border-top:3px solid transparent;border-bottom:3px solid transparent}
+.imp .tx{font-size:13px;color:#c9c9c9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.g10{height:17px;padding:0 5px;border:1px solid #14683a;background:#0a2a1a;color:#22c55e;border-radius:6px;font-size:12px;display:flex;align-items:center;flex:none}
+.con{color:var(--bl);font-size:13.5px;flex:none;background:none;border:0;font-family:inherit;padding:0;cursor:pointer}
+.row2{display:flex;justify-content:space-between;align-items:center;margin-top:22px;height:22px;font-size:13px;color:#b5b5b5}
+.row2 button{background:none;border:0;padding:0;color:var(--bl);font:inherit;font-size:14px;display:flex;align-items:center;gap:6px;cursor:pointer}
+.row2 svg{width:11px;height:11px}
+.paste{height:39px;margin-top:11px;border:1px solid var(--bd);background:#181818;border-radius:12px;display:flex;align-items:center;gap:13px;padding:0 12px;overflow:hidden}
+.paste input{flex:1;min-width:0;border:0;outline:0;background:none;color:#fff;font:inherit;font-size:14px}
+.paste input::placeholder{color:#b0b0b0}
+.cta{display:block;width:100%;height:40px;margin-top:12px;border-radius:12px;border:1px solid #4a6ee3;background:linear-gradient(#3157d6,#2547b5);color:#e3e9ff;font:inherit;font-size:14px;cursor:pointer;box-shadow:0 0 0 1px #1a2a70}
+.upl{display:flex;align-items:center;gap:9px;margin-top:16px;height:16px;font-size:13px;color:#b8b8b8;padding-left:2px}
+.upl>svg{width:14px;height:14px}
+.pro{height:16px;padding:0 6px;border:1px solid #1f3a8a;background:#101a3a;color:#4a7cf0;border-radius:8px;font-size:11px;display:flex;align-items:center;gap:3px}
+.pro svg{width:10px;height:10px}
+.sep{height:1px;background:#1b1b1b;margin-top:33px}
+.dh{display:flex;align-items:center;gap:9px;margin:36px 16px 0;height:22px}
+.dh>svg{width:18px;height:18px}
+.dh h2{margin:0;font-size:22px;font-weight:500;letter-spacing:-.2px}
+.try{height:16px;padding:0 5px;border:1px solid #1f3a8a;background:#0f1a3a;color:#4a7cf0;border-radius:8px;font-size:11px;letter-spacing:.3px;display:flex;align-items:center}
+.dp{margin:19px 16px 0;font-size:13.5px;line-height:20px;color:#a6a6a6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12.5px;margin:23px 16px 0}
+.vc{border:1px solid var(--bd);background:var(--card);border-radius:20px;overflow:hidden;height:143px;box-shadow:0 4px 12px #0005}
+.th{position:relative;height:88px;overflow:hidden;color:#fff;font-weight:800;line-height:1}
+.th .t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;text-transform:uppercase;font-size:15px;padding:6px 14px}
+.th .bd{position:absolute;left:0;bottom:0;background:#fff;color:#111;font-style:italic;font-size:7.5px;padding:2px 4px;border-radius:0 4px 0 0}
+.mn{position:absolute;top:6px;right:7px;width:30px;height:30px;border-radius:10px;background:#1c1c1ce6;border:0;display:grid;place-items:center;color:#fff;font-size:0;cursor:pointer;gap:2px;grid-auto-flow:column;align-content:center;justify-content:center}
+.mn i{width:2.5px;height:2.5px;border-radius:50%;background:#fff;display:block}
+.vi{padding:11px 11px 0}
+.vi p{margin:0;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden}
+.vi span{display:block;margin-top:5px;font-size:12px;line-height:16px;color:var(--mut)}
+.chat{position:fixed;right:max(24px,calc(50% - 156px));bottom:calc(19px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;background:#1a6cf5;border:0;display:grid;place-items:center;cursor:pointer;z-index:9}
+.chat svg{width:30px;height:30px;fill:#fff}
+button:focus-visible,input:focus-visible{outline:2px solid #8aa6ff;outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <button class="tg" type="button" aria-label="Toggle sidebar"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg></button>
+    <span class="dv"></span>
+    <div class="crumb"><span>Dashboard</span><svg class="s" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg><b>Videos</b></div>
+    <span class="free">Free</span>
+  </header>
+
+  <div class="hey">
+    <h1><span>👋</span>Hey, Aryan</h1>
+    <div class="min"><svg class="s" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>10 min</div>
+  </div>
+
+  <section class="main">
+    <div class="imp">
+      <span class="ytb"><span class="yt"></span></span>
+      <span class="tx">Import from YouTube</span>
+      <span class="g10">+10 min</span>
+      <button class="con" type="button">Connect</button>
+    </div>
+    <div class="row2"><span>Don't have a video ready?</span>
+      <button type="button" id="sample">Try a sample video <svg class="s" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></svg></button>
+    </div>
+    <label class="paste">
+      <svg width="17" height="16" viewBox="0 0 24 22"><path d="M8 1h8l8 14h-8z" fill="#fbbc04"/><path d="M8 1 0 15l4 7 8-14z" fill="#0f9d58"/><path d="M4 22l4-7h16l-4 7z" fill="#4285f4"/></svg>
+      <input id="url" type="text" placeholder="Paste a video link">
+    </label>
+    <button class="cta" id="go" type="button">Get clips in 1 click</button>
+    <div class="upl">
+      <svg class="s" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+      <span>Upload file</span>
+      <span class="pro"><svg class="s" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>PRO</span>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <div class="dh">
+    <svg class="s" viewBox="0 0 26 24"><rect x="2" y="4" width="16" height="16" rx="3"/><path d="m18 10 5-3v10l-5-3"/><circle cx="7" cy="9" r="1"/></svg>
+    <h2>Demo Videos</h2>
+    <span class="try">TRY IT</span>
+  </div>
+  <p class="dp">Explore real videos with AI-generated clips. Edit captions, try styles, and see the full workflow.</p>
+
+  <div class="grid" id="grid"></div>
+</div>
+
+<button class="chat" type="button" aria-label="Chat support"><svg viewBox="0 0 24 24"><path d="M3 4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6l-3 4v-4H5a2 2 0 0 1-2-2z"/></svg></button>
+
+<script>
+var V=[
+["Sam Altman On AI Revo…","Nov 5","linear-gradient(90deg,#8a6a58,#f1f1f1 28%,#f1f1f1 66%,#6e5646)","<span style='color:#e0202c;font-style:italic;font-size:19px;line-height:1.05'>Sam<br>Altman</span>","4M+ VIEWS"],
+["Stuck Between R…","Oct 27","linear-gradient(110deg,#c9a24a,#6e7468 40%,#4a4a44 65%,#8a3a2a)","",""],
+["How I Fought In WWE …","Oct 27","linear-gradient(100deg,#0e1f4a,#1d3a7a 50%,#b87a5a)","<span style='font-style:italic;font-size:14px;text-align:left;width:100%'>HOW I<br>FOUGHT IN<br><small style='font-size:9px'>WRESTLEMANIA</small></span>",""],
+["iPhone Duo Review: Firs…","Oct 27","linear-gradient(#2f66c8,#1f4fa8)","",""],
+["Khan Sir Podcast: India …","Oct 17","linear-gradient(90deg,#2a1a1a,#7a1a1a 50%,#1a1a22)","<span style='font-size:15px;line-height:1.05'>KHAN SIR ON<br>PAKISTAN</span>","35M+ VIEWS"],
+["People Pay $700 a Mon…","Oct 27","linear-gradient(#b9c4cc,#8a8a7a 50%,#c9a679)","",""],
+["Eat Everything In A Groc…","Oct 27","linear-gradient(110deg,#7a6a52,#b9694a 55%,#3a6a3a)","<span style='position:absolute;right:4px;top:6px;font-size:11px'>DAY 001</span>",""],
+["I Tried Learning AI Vide…","Oct 27","linear-gradient(110deg,#6a8a9a,#2a6a6a 50%,#3a8a5a)","<span style='font-size:12px;text-transform:none;font-family:cursive;position:absolute;left:12px;top:6px'>so it begins</span>",""],
+["How to Switch to Linux","Oct 27","linear-gradient(110deg,#e8781a,#e8781a 40%,#6a8ab0 60%,#4a5a70)","",""],
+["Can You Afford a Child?","Oct 27","linear-gradient(110deg,#c9a46a,#e0c9a0 50%,#8a6a4a)","<span style='font-size:13px;color:#fff;text-shadow:0 1px 2px #000;line-height:1'>CAN YOU AFFORD<br>A CHILD?</span>",""],
+["It's Extreme, But I'll NEV…","Oct 27","linear-gradient(110deg,#2a4aa8,#3a60c8 55%,#2a4a98)","",""],
+["No device could prove E…","Oct 27","linear-gradient(120deg,#0a1a4a,#1d3a7a 50%,#5a4a3a)","",""],
+["Joe Rogan Experience …","May 15","linear-gradient(90deg,#000 6%,#4a0e10 6%,#5a1214 94%,#000 94%)","",""],
+["I Solved Every Board Ga…","Oct 27","linear-gradient(110deg,#5a6a8a,#7a7a7a 50%,#c9a679)","",""],
+["This is everything that's …","Oct 27","linear-gradient(#d7cdc0,#c8bcae)","<span style='position:absolute;left:10px;top:8px;color:#222;font-family:serif;font-size:14px'>$3.25</span>",""],
+["Peptides Are Insane","Oct 27","linear-gradient(#8a8a82,#a9a9a0 60%,#5a5a56)","<span style='position:absolute;top:2px;left:6px;font-size:22px;letter-spacing:1px'>PEPTIDES</span>",""],
+["5 Real NBA Players vs. …","Oct 27","linear-gradient(#e0e0e0 35%,#d4944a 35%,#c4843a)","",""],
+["How I Would Build…","Oct 27","linear-gradient(#000,#111)","<span style='font-size:15px;position:absolute;bottom:6px;left:0;right:0;text-align:center'>DO <b style='color:#ffd200'>EPIC</b> SH*T</span>",""]
+];
+var g=document.getElementById('grid');
+g.innerHTML=V.map(function(v){
+return '<article class="vc"><div class="th" style="background:'+v[2]+'"><div class="t">'+v[3]+'</div>'+(v[4]?'<span class="bd">'+v[4]+'</span>':'')+'<button class="mn" type="button" aria-label="More"><i></i><i></i><i></i></button></div><div class="vi"><p>'+v[0]+'</p><span>'+v[1]+'</span></div></article>';
+}).join('');
+var u=document.getElementById('url');
+document.getElementById('sample').onclick=function(){u.value='https://www.youtube.com/watch?v=dQw4w9WgXcQ';};
+document.getElementById('go').onclick=function(){alert(u.value.trim()?'Clips ban rahe hain…':'Pehle video link paste karo');};
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+[
+  "backend/tests/test_cloudrun_upgrade.py::test_cloud_run_dockerfile_and_requirements_are_complete",
+  "backend/tests/test_cloudrun_upgrade.py::test_dual_speaker_split_screen_render_produces_vertical_1080x1920",
+  "backend/tests/test_cloudrun_upgrade.py::test_health_reports_scalereach_v3_pipeline",
+  "backend/tests/test_cloudrun_upgrade.py::test_new_duration_ranges_and_caption_style_presets",
+  "backend/tests/test_cloudrun_upgrade.py::test_process_video_multipart_and_status_endpoint_end_to_end",
+  "backend/tests/test_phase1.py::test_60_minute_podcast_spread_sentence_aligned_and_duration_range",
+  "backend/tests/test_phase1.py::test_boundary_snapping_never_cuts_mid_sentence",
+  "backend/tests/test_phase1.py::test_build_sentences_punctuation_hindi_and_pauses",
+  "backend/tests/test_phase1.py::test_duration_mapping_all_ui_options",
+  "backend/tests/test_phase1.py::test_no_hardcoded_score_ranges_in_prompts",
+  "backend/tests/test_phase1.py::test_overlap_removal_and_timeline_spread",
+  "backend/tests/test_phase1.py::test_python_backend_stopped_returns_503_no_fake_clips",
+  "backend/tests/test_phase1.py::test_sqlite_persistence_survives_restart",
+  "backend/tests/test_phase2.py::test_aspect_ratio_dimensions_and_scaled_timeout",
+  "backend/tests/test_phase2.py::test_ass_captions_8_styles_hindi_devanagari_hook_3s_and_sync_under_100ms",
+  "backend/tests/test_phase2.py::test_render_aspect_ratios_smart_reframe_and_split_screen_visibly_change_output",
+  "backend/tests/test_phase3.py::test_clip_rerender_extend_translate_regenerate_and_zip",
+  "backend/tests/test_phase3.py::test_hindi_hinglish_transcription_config_translation_and_caption_sync",
+  "backend/tests/test_phase3.py::test_workspace_api_keys_and_signed_webhooks"
+]

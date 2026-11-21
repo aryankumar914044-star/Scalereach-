@@ -1,0 +1,6 @@
+{
+  "name": "Scalereach",
+  "description": "Drop a video link to generate your first short-form clips in one click.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

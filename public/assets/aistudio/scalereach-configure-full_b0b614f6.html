@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scalereach – Configure</title>
+<style>
+:root{--bg:#0a0a0a;--card:#121212;--bd:#262626;--tx:#f2f2f2;--mut:#9d9d9d;--bl:#2a4fd8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0a}}
+:root[data-theme="dark"]{--bg:#0a0a0a}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Roboto,Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;color:inherit}
+.app{max-width:360px;margin:0 auto;padding-bottom:78px}
+svg.s{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;height:47px;background:#0c0c0c;border-bottom:1px solid #1d1d1d;display:flex;align-items:center;padding-right:16px}
+.tg{width:27px;height:27px;margin-left:12px;border-radius:8px;border:1px solid #343434;background:#161616;display:grid;place-items:center;padding:0;cursor:pointer}
+.tg svg{width:14px;height:14px}
+.dv{width:1px;align-self:stretch;margin-left:12px;background:#222}
+.crumb{display:flex;align-items:center;gap:10px;margin-left:13px;font-size:13.5px;color:var(--mut);flex:1}
+.crumb svg{width:10px;height:10px}
+.crumb b{font-weight:400;color:#fff}
+.free{height:20px;padding:0 6px;border-radius:8px;border:1px solid #3a3a3a;background:#1a1a1a;font-size:12px;display:flex;align-items:center;color:#eee}
+.back{display:flex;align-items:center;gap:13px;margin:11px 0 0 30px;height:24px;background:none;border:0;font-size:14px;padding:0;cursor:pointer}
+.back svg{width:14px;height:14px}
+.card{margin:21px 16px 0;border:1px solid var(--bd);background:var(--card);border-radius:20px;overflow:hidden}
+.c1{margin-top:22px;padding:16px 17px 0}
+.lbl{display:flex;align-items:center;gap:8px;height:20px;font-size:14px}
+.yt{width:16px;height:11px;background:#f00;border-radius:3px;position:relative;flex:none}
+.yt:after{content:"";position:absolute;left:6px;top:2.5px;border-left:5px solid #fff;border-top:3px solid transparent;border-bottom:3px solid transparent}
+.in{display:flex;align-items:center;gap:8px;height:39px;margin-top:13px;border:1.5px solid #22c55e;background:#151515;border-radius:12px;padding:0 12px 0 11px}
+.in input{flex:1;min-width:0;border:0;outline:0;background:none;color:#fff;font:inherit;font-size:14px}
+.in svg{width:15px;height:15px;color:#22c55e}
+.vid{margin:17px -17px 0;border-top:1px solid #1f1f1f}
+.pic{position:relative;height:183px;background:radial-gradient(circle at 80% 14%,#ff9cff 0,#c433dd 10%,transparent 34%),radial-gradient(circle at 32% 38%,#9a7a68 0,#6a5568 18%,transparent 36%),radial-gradient(circle at 66% 52%,#2c1226 0,#4a1a38 18%,transparent 34%),radial-gradient(circle at 52% 85%,#9a1a24 0,#6a1018 14%,transparent 30%),linear-gradient(135deg,#6a1a9a,#b02ac8 55%,#3a1060)}
+.mj{position:absolute;left:9px;bottom:8px;width:25px;height:25px;border-radius:50%;background:#0aa5e8;display:grid;place-items:center;font-size:7px;font-weight:700;color:#fff}
+.vi{display:flex;justify-content:space-between;gap:10px;padding:11px 13px 11px 13px}
+.vi p{margin:0;font-size:14px;line-height:20px}
+.vi span{display:block;font-size:13px;line-height:20px;color:var(--mut)}
+.vi button{background:none;border:0;padding:0;width:20px;height:20px;margin:4px 8px 0 0;cursor:pointer;color:#ddd}
+.vi button svg{width:14px;height:14px}
+.pad{padding:16px 17px 17px}
+.hd{display:flex;align-items:center;gap:7px;height:20px;font-size:14px;font-weight:500}
+.inf{width:13px;height:13px;color:#9a9a9a;flex:none}
+.ds{margin:0;font-size:12px;line-height:16px;color:#a2a2a2}
+.hd+.ds{margin-top:2px}
+.tabs{display:inline-flex;margin-top:11px;height:36px;padding:3px 4px;background:#1d1d1d;border-radius:12px;gap:0}
+.tabs button{border:1px solid transparent;background:none;border-radius:10px;font-size:14px;padding:0 13px;color:#a2a2a2;cursor:pointer}
+.tabs .on{background:#2a2a2a;border-color:#4a4a4a;color:#fff}
+.slct{display:flex;align-items:center;justify-content:space-between;margin-top:20px;height:53px;padding:0 10px 0 13px;border:1px solid #333;background:#161616;border-radius:14px}
+.slct b{display:block;font-weight:400;font-size:14px;line-height:20px}
+.slct span{display:block;font-size:13px;line-height:18px;color:#a0a0a0}
+.ud{width:14px;height:14px;color:#aaa;flex:none}
+.cap{display:flex;align-items:center;justify-content:space-between}
+.sw{position:relative;flex:none;width:30px;height:18px;border-radius:9px;border:0;background:#2a2a2a;padding:0;cursor:pointer}
+.sw:after{content:"";position:absolute;top:1.5px;left:1.5px;width:15px;height:15px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on{background:var(--bl)}
+.sw.on:after{left:13.5px}
+.styles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:17px;padding:0 3px}
+.st{height:72px;border:1px solid #2c2c2c;background:#1b1b1b;border-radius:14px;display:flex;flex-direction:column;align-items:center;padding:0;cursor:pointer;font-size:12px;color:#a8a8a8}
+.st.on{border:2px solid #2f55e0;margin:-3px -2px;height:78px;padding-top:2px;background:#1b1b1b}
+.pv{width:72px;height:29px;margin-top:16px;border-radius:6px;display:grid;place-items:center;overflow:hidden;font:900 7.2px/1 Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;white-space:nowrap;background:linear-gradient(110deg,#6a5a50,#222 28%,#101010 60%,#6a4a3a);text-shadow:0 0 4px currentColor}
+.st.on .pv,.pv.big{background:none;text-shadow:none}
+.st span.l{margin-top:auto;margin-bottom:8px}
+.big{font:800 15px/1 Roboto,Arial,sans-serif;text-align:center;height:auto}
+.rows .row{display:flex;align-items:center;justify-content:space-between;padding:12px 17px;border-top:1px solid #222}
+.rows .row:first-child{border-top:0}
+.rows .ds{padding-right:12px}
+.pro{height:15px;padding:0 6px;border:1px solid #1f3a8a;background:#101a3a;color:#4a7cf0;border-radius:8px;font-size:11px;display:flex;align-items:center}
+.sec{display:flex;align-items:center;padding:12.5px 17px;border-top:1px solid #222}
+.sec:first-child{border-top:0;padding:12px 17px}
+.sec .lb{flex:0 0 114px;display:flex;align-items:center;gap:7px;font-size:14px;font-weight:500;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:9px 8px;flex:1}
+.chips button{height:29px;padding:0 13px;border:1px solid #333;background:#1a1a1a;border-radius:13px;font-size:14px;cursor:pointer}
+.chips .on{border-color:#4a6ee3;box-shadow:0 0 0 1.5px #2447d8}
+.sec .sel{margin-left:auto;display:flex;align-items:center;gap:9px;width:143px;height:36px;padding:0 9px 0 12px;border:1px solid #3a3a3a;background:#181818;border-radius:12px;font-size:14px}
+.sec .sel .ud{margin-left:auto}
+.sec .sel>svg:first-child{width:12px;height:14px;flex:none}
+.tr{position:relative;height:16px;margin-top:16px}
+.tr i{position:absolute;left:8px;right:8px;top:4px;height:8px;border-radius:4px;background:var(--bl)}
+.tr b{position:absolute;top:0;width:15px;height:15px;border-radius:50%;background:#0b0b0b;border:2px solid #2a4fd8}
+.tf{display:grid;grid-template-columns:1fr 35px 1fr;align-items:center;margin-top:16px}
+.tf .a{font-size:13px;color:#a2a2a2;margin-bottom:5px;height:16px}
+.tm{display:flex;align-items:center;gap:9px;height:31px;border:1px solid #3a3a3a;background:#181818;border-radius:12px;padding:0 10px;font:15px "Roboto Mono",ui-monospace,Menlo,monospace}
+.tm svg{width:12px;height:12px;color:#aaa}
+.to{text-align:center;font-size:13px;color:#a2a2a2;padding-top:21px}
+.hint{margin:12px 0 0;font-size:12.5px;line-height:16px;color:#a5a5a5}
+.stat{margin-top:17px;height:31px;display:flex;align-items:center;padding:0 12px;border-radius:12px;background:#1c1c1c;font-size:13px;color:#c8c8c8}
+.sp{display:flex;align-items:center;gap:10px;height:28px;margin-top:8px;font-size:14px}
+.sp>svg{width:14px;height:14px;color:#aaa}
+.up{height:19px;padding:0 7px;display:flex;align-items:center;gap:4px;border:1px solid #3a3a3a;background:#1a1a1a;border-radius:10px;font-size:13px}
+.up svg{width:10px;height:10px}
+.sp .sw{margin-left:auto}
+.sd{margin:12px 0 0 31px;font-size:13px;line-height:16px;color:#a8a8a8}
+.lock{display:flex;align-items:center;gap:13px;margin:24px 0 0 6px;font-size:13px;color:#6e6e6e;height:16px}
+.lock svg{width:12px;height:12px}
+.dim{opacity:.5}
+.bgv{margin:20px 0 0;font-size:14.5px;line-height:20px}
+.dim .ds{margin-top:10px;font-size:12.5px}
+.bc{display:flex;gap:8px;margin-top:10px;overflow:hidden}
+.bc button{flex:none;height:28px;padding:0 12px;border:0;background:#1d1d1d;border-radius:10px;font-size:14px;color:#aaa;display:flex;align-items:center;gap:8px}
+.bc .on{background:#1d3fa8;color:#fff}
+.sb{height:4px;width:202px;background:#555;margin:1px 0 0 -4px;border-radius:2px}
+.bt{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:11px}
+.bt i{display:block;height:79px;border-radius:10px;background:linear-gradient(#6a3a2a,#a84a2a 40%,#3a2a2a 70%,#5a6a3a)}
+.bt i+i{background:linear-gradient(#3a8a2a,#6a7a3a 30%,#a8502a 55%,#5a3a2a)}
+.cw{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;pointer-events:none;z-index:8;padding-bottom:calc(3px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,#0a0a0acc 60%)}
+.cw div{width:100%;max-width:360px;padding:14px 16px 0;pointer-events:auto}
+.go{width:100%;height:35px;border-radius:14px;border:1px solid #5a7ced;background:linear-gradient(#3157d6,#2547b5);color:#dfe6ff;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;box-shadow:0 0 14px #2447d899}
+.go svg{width:16px;height:16px;fill:currentColor}
+button:focus-visible,input:focus-visible{outline:2px solid #8aa6ff;outline-offset:2px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+<symbol id="ud" viewBox="0 0 24 24"><path d="m7 9 5-5 5 5M7 15l5 5 5-5"/></symbol>
+<symbol id="clk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="lk" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+<div class="app">
+  <header class="bar">
+    <button class="tg" type="button" aria-label="Toggle sidebar"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg></button>
+    <span class="dv"></span>
+    <div class="crumb"><span>Dashboard</span><svg class="s" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg><b>Configure</b></div>
+    <span class="free">Free</span>
+  </header>
+
+  <button class="back" type="button"><svg class="s" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back</button>
+
+  <!-- 1 -->
+  <section class="card c1">
+    <div class="lbl"><span class="yt"></span>YouTube URL</div>
+    <div class="in"><input type="text" value="https://youtu.be/gabghul30io?si=Fx2kQ9" aria-label="YouTube URL"><svg class="s" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg></div>
+    <div class="vid">
+      <div class="pic"><span class="mj">mojo</span></div>
+      <div class="vi">
+        <div><p>5 Features You ONLY Get In The Ultimate Edition of GTA 6</p><span>WatchMojo.com • 7:15</span></div>
+        <button type="button" aria-label="Remove"><svg class="s" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="card pad">
+    <div class="hd">Clip Type <svg class="inf s"><use href="#i"/></svg></div>
+    <p class="ds">Choose what kind of clips to generate</p>
+    <div class="tabs" id="tabs"><button class="on" type="button">Templates</button><button type="button">Custom</button></div>
+    <div class="slct"><div><b>Viral Clips</b><span>For several high-impact short videos.</span></div><svg class="ud s"><use href="#ud"/></svg></div>
+  </section>
+
+  <!-- Captions -->
+  <section class="card pad">
+    <div class="cap"><div><div class="hd">Captions <svg class="inf s"><use href="#i"/></svg></div><p class="ds">Add captions to your clips and choose a style</p></div><button class="sw on" type="button" role="switch" aria-checked="true" aria-label="Captions"></button></div>
+    <div class="styles" id="styles"></div>
+  </section>
+
+  <!-- 3 -->
+  <section class="card rows">
+    <div class="row"><div><div class="hd">Auto Hook <svg class="inf s"><use href="#i"/></svg></div><p class="ds">AI hook title at the top of every clip to grab attention</p></div><button class="sw on" type="button" role="switch" aria-checked="true" aria-label="Auto Hook"></button></div>
+    <div class="row"><div><div class="hd">Smart AI Reframing <svg class="inf s"><use href="#i"/></svg></div><p class="ds">Automatically reframe horizontal video to 9:16 by tracking faces</p></div><button class="sw on" type="button" role="switch" aria-checked="true" aria-label="Smart AI Reframing"></button></div>
+    <div class="row"><div><div class="hd">AI Music <span class="pro">PRO</span> <svg class="inf s"><use href="#i"/></svg></div><p class="ds">Add background music that fits each clip, mixed under the speaker</p></div><button class="sw" type="button" role="switch" aria-checked="false" aria-label="AI Music"></button></div>
+  </section>
+
+  <section class="card">
+    <div class="sec"><div class="lb">Clip Duration <svg class="inf s"><use href="#i"/></svg></div>
+      <div class="chips" id="dur"><button class="on" type="button">Auto</button><button type="button">0 - 30s</button><button type="button">30 - 60s</button><button type="button">1 - 2 min</button><button type="button">2 - 3 min</button></div></div>
+    <div class="sec"><div class="lb">Aspect Ratio <svg class="inf s"><use href="#i"/></svg></div>
+      <div class="sel"><svg class="s" viewBox="0 0 12 14"><rect x="1.5" y="1" width="9" height="12" rx="2"/><path d="M5 11h2"/></svg>9:16 Portrait<svg class="ud s"><use href="#ud"/></svg></div></div>
+    <div class="sec"><div class="lb">Language <svg class="inf s"><use href="#i"/></svg></div>
+      <div class="sel" style="padding-left:13px">English<svg class="ud s"><use href="#ud"/></svg></div></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="card pad">
+    <div class="hd">Processing Timeframe <svg class="inf s"><use href="#i"/></svg></div>
+    <p class="ds">Select which part of the video to process</p>
+    <div class="tr"><i></i><b style="left:0"></b><b style="right:0"></b></div>
+    <div class="tf">
+      <div class="a">Start</div><div></div><div class="a">End</div>
+      <div class="tm"><svg class="s"><use href="#clk"/></svg>0:00</div><div class="to">to</div><div class="tm"><svg class="s"><use href="#clk"/></svg>7:15</div>
+    </div>
+    <p class="hint">Type 10 for 10 minutes, or 2:30 for 2 min 30 sec. Pick at least 1 minute.</p>
+    <div class="stat">Processing 7:15 of 7:15 (full video)</div>
+  </section>
+
+  <section class="card pad">
+    <div class="hd">Layout Options <svg class="inf s"><use href="#i"/></svg></div>
+    <div class="sp"><svg class="s" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 12h18"/></svg>Split Screen<span class="up"><svg class="s"><use href="#lk"/></svg>Upgrade</span><button class="sw" type="button" role="switch" aria-checked="false" aria-label="Split Screen"></button></div>
+    <p class="sd">Add engaging background videos like Subway Surfer, Minecraft, and more to boost retention.</p>
+    <div class="lock"><svg class="s" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>Aspect ratio locked to 9:16 for split-screen mode</div>
+    <div class="dim">
+      <div class="bgv">Background Video</div>
+      <p class="ds">Select one or more - each clip gets a random pick from your selection. Leave all unselected for fully random.</p>
+      <div class="bc"><button class="on" type="button">All</button><button type="button">🚗 GTA 5</button><button type="button">⛏️ Minecraft</button><button type="button">🎬 Subway Surfers</button></div>
+      <div class="sb"></div>
+      <div class="bt"><i></i><i></i></div>
+    </div>
+  </section>
+</div>
+
+<div class="cw"><div><button class="go" type="button"><svg viewBox="0 0 24 24"><path d="m10 4-1.6 5.4L3 11l5.4 1.6L10 18l1.6-5.4L17 11l-5.4-1.6zM18 3l-.7 2.3L15 6l2.3.7L18 9l.7-2.3L21 6l-2.3-.7zM18 15l-.7 2.3L15 18l2.3.7L18 21l.7-2.3L21 18l-2.3-.7z"/></svg>Get Clips</button></div></div>
+
+<script>
+var S=[["Classic","c"],["Cyan Slide","#19b5ff"],["Italic Red","#ff2a1a","italic"],["Cream Blue","#79a4ff"],["Red Spin","#ff2a1a"],["Violet","#6a5aff"],["Blue Glow","g"],["Toxic Green","t"]];
+document.getElementById('styles').innerHTML=S.map(function(s,i){
+var p;
+if(s[1]=='c')p='<div class="pv big" style="color:#fff;margin-top:12px">TO GET<br><span style="color:#fff200">STARTED</span></div>';
+else if(s[1]=='g')p='<div class="pv big" style="margin-top:12px;color:#fff"><span style="font-weight:500;font-size:16px">to get</span><br><span style="color:#3aa0ff;font-size:14px">STARTED</span></div>';
+else if(s[1]=='t')p='<div class="pv big" style="margin-top:12px;color:#3ee03a;font-family:Impact,Arial Narrow,sans-serif;font-weight:400;font-size:15px;text-shadow:0 1px 2px #000">TO GET<br>STARTED</div>';
+else p='<div class="pv" style="color:'+s[1]+';font-style:'+(s[2]||'normal')+'">More founders than</div>';
+return '<button class="st'+(i==0?' on':'')+'" type="button">'+p+'<span class="l">'+s[0]+'</span></button>';}).join('');
+document.addEventListener('click',function(e){
+var b=e.target.closest('button');if(!b)return;
+if(b.classList.contains('sw')){b.classList.toggle('on');b.setAttribute('aria-checked',b.classList.contains('on'))}
+else if(b.classList.contains('st')||b.parentNode.id=='dur'||b.parentNode.id=='tabs'){[].forEach.call(b.parentNode.children,function(x){x.classList.remove('on')});b.classList.add('on')}
+});
+</script>
+</body>
+</html>

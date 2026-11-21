@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scalereach – Onboarding</title>
+<style>
+:root{--bg:#0b0b0b;--card:#111;--bd:#2a2a2a;--tx:#fff;--mut:#9c9c9c;--link:#3b6fe0;--gr:#22d36b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b}}
+:root[data-theme="dark"]{--bg:#0b0b0b}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.page{max-width:360px;margin:0 auto;padding:20px 15px 70px;text-align:center;min-height:100vh;position:relative}
+.logo{display:flex;align-items:center;justify-content:center;gap:8px;height:30px;margin-top:4px}
+.logo i{width:30px;height:30px;border-radius:7px;background:linear-gradient(145deg,#3f6cf0,#2447b5);display:grid;place-items:center}
+.logo b{font-size:12px;font-weight:600;letter-spacing:.1px}
+h1{font-size:22px;line-height:1.2;font-weight:700;margin:26px 0 14px;letter-spacing:-.3px}
+.sub{font-size:14px;line-height:23px;color:var(--mut);margin:0 auto 26px;max-width:320px}
+.badge{display:flex;align-items:center;justify-content:center;gap:7px;height:31px;border-radius:8px;background:#0a2314;border:1px solid #145a30;color:var(--gr);font-size:13px;margin-bottom:23px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px 19px 19px;text-align:left}
+.top{display:flex;justify-content:space-between;align-items:center;height:20px;margin-bottom:21px}
+.top h2{margin:0;font-size:13px;font-weight:600}
+.top button{background:none;border:0;padding:0;color:var(--link);font:inherit;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:5px}
+.field{height:44px;border-radius:9px;background:#171717;border:1px solid var(--bd);display:flex;align-items:center;gap:9px;padding:0 14px;overflow:hidden}
+.field input{flex:1;min-width:0;border:0;outline:0;background:none;color:#fff;font:inherit;font-size:13px}
+.field input::placeholder{color:#8d8d8d}
+.works{margin:19px 0 14px;font-size:11px;color:var(--mut)}
+.works .l1{display:flex;align-items:center;gap:7px;height:16px}
+.yt{width:14px;height:10px;background:#f00;border-radius:3px;position:relative}
+.yt:after{content:"";position:absolute;left:5px;top:2px;border-left:4px solid #fff;border-top:3px solid transparent;border-bottom:3px solid transparent}
+.l2{display:flex;align-items:center;gap:5px;margin-top:8px;color:#5e5e5e}
+.l2 svg{width:12px;height:12px;fill:#6a6a6a;flex:none}
+.l2 em{font-style:normal;color:#8a8a8a;margin-left:3px;font-size:11px;white-space:nowrap}
+.cta{width:100%;height:41px;border-radius:8px;border:1px solid #4a6ee3;background:linear-gradient(#3156d4,#2748b6);color:#dce5ff;font:inherit;font-size:13px;font-weight:500;cursor:pointer}
+.or{display:flex;align-items:center;gap:12px;margin:17px 0;font-size:11px;color:var(--mut)}
+.or:before,.or:after{content:"";flex:1;height:1px;background:var(--bd)}
+.up{height:106px;border:1px dashed #363636;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.up svg{width:21px;height:21px;stroke:#8f8f8f;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.up h3{margin:6px 0 0;font-size:13px;font-weight:500}
+.up p{margin:0;font-size:11px;color:var(--mut)}
+.skip{display:block;margin:28px auto 0;background:none;border:0;color:var(--mut);font:inherit;font-size:12px;cursor:pointer;white-space:nowrap}
+.chat{position:fixed;right:max(11px,calc(50% - 169px));bottom:calc(46px + env(safe-area-inset-bottom,0px));width:50px;height:50px;border-radius:50%;border:0;background:#1a6cf5;display:grid;place-items:center;cursor:pointer}
+.chat svg{width:30px;height:30px;fill:#fff}
+button:focus-visible,input:focus-visible{outline:2px solid #8aa6ff;outline-offset:2px}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="logo">
+    <i><svg width="16" height="16" viewBox="0 0 24 24" fill="#d5ddff"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></i>
+    <b>scalereach</b>
+  </div>
+  <h1>You’re all set!</h1>
+  <p class="sub">Your workspace is ready. Drop a video below to see your first clips.</p>
+  <div class="badge"><span>🎉</span><span>10 free minutes added to your account</span></div>
+
+  <section class="card">
+    <div class="top">
+      <h2>Add your first video</h2>
+      <button type="button" id="sample">Try a sample video
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#3b6fe0" stroke-width="1.5" stroke-linecap="round"><path d="M2 3.5 5 6.5 8 3.5"/></svg>
+      </button>
+    </div>
+    <div class="field">
+      <svg width="19" height="19" viewBox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#85c742"/><path d="M9.5 7.5v9l7-4.5z" fill="#0b0b0b"/></svg>
+      <input id="url" type="text" placeholder="Paste a YouTube, Twitch, Drive, Dropbox link" aria-label="Video link">
+    </div>
+    <div class="works">
+      <div class="l1">Works with <span class="yt"></span></div>
+      <div class="l2">
+        <svg viewBox="0 0 12 12"><path d="M3 5V4a3 3 0 0 1 6 0v1h1v6H2V5zm1 0h4V4a2 2 0 0 0-4 0z"/></svg>
+        <svg viewBox="0 0 12 12"><path d="M1 1h10v7H7l-2 3V8H1z"/></svg>
+        <svg viewBox="0 0 12 12"><path d="M2 1h2v4l4-4h2.5L6 6l5 5H8.5L4 6.5V11H2z"/></svg>
+        <svg viewBox="0 0 12 12"><path d="M4 1h4l4 7-2 3H2L0 8z"/></svg>
+        <svg viewBox="0 0 12 12"><path d="M3 1 6 3 3 5 0 3zM9 1l3 2-3 2-3-2zM3 7l3 2-3 2-3-2zM9 7l3 2-3 2-3-2z"/></svg>
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="2"/><path d="M5.5 0h1v2.5h-1zM5.5 9.5h1V12h-1zM0 5.5h2.5v1H0zM9.5 5.5H12v1H9.5z"/></svg>
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>
+        <svg viewBox="0 0 12 12"><path d="M2 2h5a3 3 0 0 1 0 6H4v3H2z"/></svg>
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>
+        <svg viewBox="0 0 12 12"><path d="M1 3h10v2H1zM1 7h10v2H1z"/></svg>
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="7" r="4"/><path d="M3 1l1 3M9 1 8 4"/></svg>
+        <em>+ .mp4/.mov links</em>
+      </div>
+    </div>
+    <button class="cta" id="go" type="button">Get clips in 1 click &nbsp;→</button>
+    <div class="or">OR</div>
+    <div class="up">
+      <svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 17.7 8 4.5 4.5 0 0 1 17 18"/><path d="M12 11v9M8.5 14.5 12 11l3.5 3.5"/></svg>
+      <h3>Upload a file</h3>
+      <p>File upload requires a paid plan</p>
+    </div>
+  </section>
+  <button class="skip" type="button" id="skip">Not right now, take me to my workspace</button>
+</main>
+<button class="chat" type="button" aria-label="Chat support">
+  <svg viewBox="0 0 24 24"><path d="M3 4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6l-3 4v-4H5a2 2 0 0 1-2-2z"/></svg>
+</button>
+<script>
+var u=document.getElementById('url');
+document.getElementById('sample').onclick=function(){u.value='https://www.youtube.com/watch?v=dQw4w9WgXcQ';};
+document.getElementById('go').onclick=function(){alert(u.value.trim()?'Clips ban rahe hain…':'Pehle video link paste karo');};
+document.getElementById('skip').onclick=function(){alert('Workspace khul raha hai…');};
+</script>
+</body>
+</html>
